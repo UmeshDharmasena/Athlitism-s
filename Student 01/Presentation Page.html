@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Presentation Page</title>
+    <link rel="stylesheet" href="Stylesheets/style.css" >
+	<link rel="icon" href="Images/logotitle.png" type="image/x-icon">
+	
+</head>
+<body>
+<!-- Logo -->
+<div class="logo">
+	<img src="Images/logo.png" width="130" height="130" alt="Logo">
+</div>
+<h3> WELCOME TO </h3>
+<h1>ATHLITISMOS</h1>
+
+
+	<div class="slideshow-container">
+
+	<div class="mySlides fade">
+		<div class="text">Student 01 <br> RAVINDU LAKSHITHA</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="text">Student 02 <br>  UMESH DHARMASENA</div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="text">Student 03 <br>  PASINDU ALAWATTEGAMA </div>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="text">Student 04 <br> MIHIN RATNAYAKE</div>
+	</div>
+
+	</div>
+
+	<div style="text-align:center">
+		<span class="dot"></span> 
+		<span class="dot"></span> 
+		<span class="dot"></span>
+		<span class="dot"></span> 
+	</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 1000); 
+  setTimeout(function(){window.location.href="../Student 02/main.html"},4000)
+}
+</script>
+
+
+				
+<!-- Footer -->
+<div class="footer">
+	<span>©2021. Many Rights Reserved.</span>
+	<div class="social">
+		Find Us on:
+		<a href="https://www.facebook.com/"><img src="Images/facebookl.png" alt="facebook"></a>
+			<a href="https://www.instagram.com/"><img src="Images/instagraml.png" alt="instagram"></a>
+			<a href="https://www.linkedin.com/"><img src="Images/linkedInl.png" alt="linkedIn"></a>
+			<a href="https://twitter.com/"><img src="Images/twitterl.png" alt="twitter"></a>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

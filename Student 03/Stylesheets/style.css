@@ -1,0 +1,92 @@
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	margin:0;
+	padding:0;
+	background: url("../Images/sports02.jpg")no-repeat;
+	background-size:100% 100%;
+	
+  
+}
+.box{
+	width:450px;
+	background: rgba(0,0,0,.6);
+	padding:40px;
+	margin:auto;
+	margin-top: 5%;
+	color:white;
+	
+}
+.footer {
+				position: relative;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: #242424;
+				padding: 70px;
+				font-weight: 400;
+				font-size: 14px;
+				}
+				
+			.footer span{
+				color: #fff;
+				}
+			.social {
+				float: right;
+				color: #fff;
+				}
+				
+			.social a {
+				width:25px;
+				text-align: center;
+				margin: 0px 23px;
+				filter: drop-shadow(0px 4px 4px #00000040);
+				}
+				
+			.social img {
+				width: 25px;
+				}
+			#main_button {
+				padding: 1%;
+				width: fit-content;
+				margin-top: 2%;
+				background: #75FF20;
+				border-radius: 20px;
+				font-weight: 500;
+				opacity: 0.9;
+				transition: transform 0.5s, opacity 0.5s;
+				}
+
+			#main_button:hover {
+				transform: scale(1.2);
+				opacity: 1;
+				}
+					
+			#abc{text-decoration:none;}
+			
+
+			a{ color:black;
+			}
+			
+			logo{position:relative;
+			left:45%;
+			top:70px;
+			}
+			
+.topbtn{
+	height:40px;
+	width:90px;
+	box-shadow: 0px 4px 15px 1px rgba(0,255,255,1);
+	transition:.3s ease-in;
+	position:relative;
+	bottom:30px;
+	float:right;
+	border-radius:14%;
+	
+	
+}
+.topbtn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,250,100,1);
+}

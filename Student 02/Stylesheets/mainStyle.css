@@ -1,0 +1,132 @@
+@font-face {
+	font-family: Moderne Sans;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2)
+  }
+  html{
+	  scroll-behavior:smooth;
+  }
+  * {
+	box-sizing: border-box;
+  }
+  body {
+	margin: 0;
+	background: #000;
+	background-size: cover;
+  }
+  video { 
+	  position: fixed;
+	  top: 10%;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  object-position: center;
+  }
+  div#fashion {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  header {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	color: white;
+	transition: .4s;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+  }
+  cheader:hover {
+	background: rgba(255,255,255,0.8);
+	color: #000;
+  }
+  h1 {
+	font-family: Moderne Sans, sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	width: 100%;
+	letter-spacing: .5rem;
+  }
+  nav a {
+	text-decoration: none;
+	color: inherit;
+	padding: 1rem;
+  }
+  h2 { 
+	font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+	font-size: 8vmin;
+	text-align: center;
+	margin: 2rem 3rem 0;
+	mix-blend-mode: overlay;
+	color: #fff;
+	font-weight: 100;
+  }
+  					
+			
+  .info{  background: rgba(255,255,255,1);
+  position:absolute;
+  top:100%;	
+  height:800px;
+  
+  }	  	
+	
+	
+  h3{font-size:25px;}
+
+  /* Footer */
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	padding: 40px;
+	font-weight: 400;
+	font-size: 16px;
+  }
+  
+  .footer span{
+	color: #fff;
+  }
+  .social {
+	float: right;
+	color: #fff;
+  }
+  
+  .social a {
+	width:30px;
+	text-align: center;
+	margin: 0px 20px;
+	filter: drop-shadow(0px 4px 4px #00000040);
+  }
+  
+  .social img {
+	width: 15px;
+  }
+  .container {background-image: linear-gradient(rgba(26, 25, 25, 0.295),rgba(26, 25, 25, 0.295));
+	border-radius: 5px;
+	padding: 20px;}
+  .column img {
+	  width: 300px;
+	  height: 150px;
+	  border: 20px solid #333;}
+  .container dd{
+	  color: black;
+	  font-size: 25px;
+  }
+   * {
+	box-sizing: border-box;
+  }
+  
+  .column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+	content: "";
+	clear: both;
+	display: table;
+  }

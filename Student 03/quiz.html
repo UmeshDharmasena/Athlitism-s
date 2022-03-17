@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <meta charset="utf-8"/>
+  
+     <title>  Quiz </title>
+   <link rel="stylesheet" href="Stylesheets/stylesForQuiz.css">
+   <link rel="stylesheet" href="Stylesheets/everyoneStyle.css">
+	<link rel="icon" href="Images/logotitle.png" type="image/x-icon">
+	
+		<script>
+		//getting the values of the radio buttons
+				function getRadioValue( radioArray ) {
+				   var i;
+				   for ( i = 0; i < radioArray.length; i++ ) {
+					  if ( radioArray[ i ].checked ) { 
+						 return radioArray[ i ].value;
+					  }
+				   }
+				   return "";
+				}
+				//Assigning the radio values to variables	
+				function show(frmref){
+				
+					var que1 = getRadioValue(frmref.question1);
+					var que2 = getRadioValue(frmref.question2);
+					var que3 = getRadioValue(frmref.question3);
+					var que4 = getRadioValue(frmref.question4);
+					var que5 = getRadioValue(frmref.question5);
+					var que6 = getRadioValue(frmref.question6);
+					var que7 = getRadioValue(frmref.question7);
+					var que8 = getRadioValue(frmref.question8);
+					var que9 = getRadioValue(frmref.question9);
+					var que10 = getRadioValue(frmref.question10);
+					
+					
+                    
+								
+				}
+				//This function gets the value of the radio button which is clicked in a radio group
+					function check(){
+						
+						var c=0;//This variable is used to store the score
+						var qu1 = document.quiz.question1.value;
+						var qu2 = document.quiz.question2.value;
+						var qu3 = document.quiz.question3.value;
+						var qu4 = document.quiz.question4.value;
+						var qu5 = document.quiz.question5.value;
+						var qu6 = document.quiz.question6.value;
+						var qu7 = document.quiz.question7.value;
+						var qu8 = document.quiz.question8.value;
+						var qu9 = document.quiz.question9.value;
+						var qu10 = document.quiz.question10.value;
+						
+						
+						if (qu1=="c1"){  //Increasing the score if the user the answerd the question correctly
+						c=c+2;}
+							else if (qu1=="w"){//Decreasing the score if the user gave a wrong answer
+							c=c-1;}
+						if (qu2=="c2"){
+						c=c+2;}
+						    else if (qu2=="w"){
+							c=c-1;}
+						if (qu3=="c3"){
+						c=c+2;}
+						    else if (qu3=="w"){
+							c=c-1;}
+						if (qu4=="c4"){
+						c=c+2;}
+						    else if (qu4=="w"){
+							c=c-1;}
+						if (qu5=="c5"){
+						c=c+2;}
+						    else if (qu5=="w"){
+							c=c-1;}
+						if (qu6=="c6"){
+						c=c+2;}
+						    else if (qu6=="w"){
+							c=c-1;}
+						if (qu7=="c7"){
+						c=c+2;}
+						    else if (qu7=="w"){
+							c=c-1;}
+						if (qu8=="c8"){
+						c=c+2;}
+						    else if (qu8=="w"){
+							c=c-1;}
+						if (qu9=="c9"){
+						c=c+2;}
+						    else if (qu9=="w"){
+							c=c-1;}
+						if (qu10=="c10"){
+						c=c+2;}
+						    else if (qu10=="w"){
+							c=c-1;}
+						
+
+						//Changing the background color according to the score of the user
+						if(c<=0){document.body.style.backgroundColor = "#ff0000";
+						displaycorrect();
+						}
+						else if(c<=4){document.body.style.backgroundColor = "#ff4400";
+						displaycorrect();
+						}
+						else if(c<=6){document.body.style.backgroundColor = "#ff7700";
+						displaycorrect();
+						}
+						else if(c<=8){document.body.style.backgroundColor = "#ff8800";
+						displaycorrect();
+						}
+						else if(c<=10){document.body.style.backgroundColor = "#ffcc00";
+						displaycorrect();
+						}
+						else if(c<=14){document.body.style.backgroundColor = "#ffdd00";
+						displaycorrect();
+						}
+						else if(c<=16){document.body.style.backgroundColor = "#ffee00";
+						displaycorrect();
+						}
+						else if(c<=19){document.body.style.backgroundColor = "#ffff00";
+						displaycorrect();
+						}
+						else if(c==20){document.body.style.backgroundColor = "#00aa00";
+						displaycorrect();
+						}
+						
+						
+						
+						
+						
+						document. getElementById("score"). innerHTML = String( c );//displaying the score of the user in a paragarph tag
+						var timetaken= 60-timeLeft;//claculating the time taken for the quiz
+						document. getElementById("lastfinaltime"). innerHTML = String( timetaken )+" Seconds";
+						
+						if (timetaken >= 60) {//Display timeout if the time limit is over
+						document. getElementById("timsup"). innerHTML = "Time Out!!!";
+
+						}
+		
+				}
+				function displaycorrect(){//changes the text color of the correct answer to green in the lable
+				document.getElementById("c1").style.color = "#00ff00";
+				document.getElementById("c2").style.color = "#00ff00";
+				document.getElementById("c3").style.color = "#00ff00";
+				document.getElementById("c4").style.color = "#00ff00";
+				document.getElementById("c5").style.color = "#00ff00";
+				document.getElementById("c6").style.color = "#00ff00";
+				document.getElementById("c7").style.color = "#00ff00";
+				document.getElementById("c8").style.color = "#00ff00";
+				document.getElementById("c9").style.color = "#00ff00";
+				document.getElementById("c10").style.color = "#00ff00";
+				
+				
+				}
+
+			
+					  var timeLeft = 60;//variable which sets the starting time to 60seconds
+					  var tmr;
+					 
+					  function startTimer() {
+	
+						 tmr = window.setInterval( "updateTime()", 1000 );//Runs the updateTime() function every second
+						 setTimeout(checker, 1000);
+					       }
+					  
+					  function updateTime()
+						{	 
+						  --timeLeft;//Reducing the time left
+						  document.getElementById( "secs" ).innerHTML = timeLeft;//Displays the time left
+						  setTimeout(checker, 1000);
+					}
+										
+					//if the timeLeft is less than zero this function gets activated and clear the variable tmr, and triggers the check() function 
+					function checker(){
+						 if (timeLeft <= 0) {
+				         clearInterval(tmr);
+					     check();}}
+						 
+						 
+						   
+					 function showQuestions() {//This function activates when the start button is clicked
+					var showQ1 = document.getElementById("ques1");
+					 showQ1.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ1.style.display = "block";  // makes question 1 visible when a button is clicked
+					 
+					 var showQ2 = document.getElementById("ques2");
+					 showQ2.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ2.style.display = "block";  // makes question 2 visible when a button is clicked
+					 
+					 var showQ3 = document.getElementById("ques3");
+					 showQ3.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ3.style.display = "block";  // makes question 3 visible when a button is clicked
+					 
+					 var showQ4 = document.getElementById("ques4");
+					 showQ4.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ4.style.display = "block";  // makes question 4 visible when a button is clicked
+					 
+					 var showQ5 = document.getElementById("ques5");
+					 showQ5.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ5.style.display = "block";  // makes question 5 visible when a button is clicked
+					 
+					 var showQ6 = document.getElementById("ques6");
+					 showQ6.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ6.style.display = "block";  // makes question 6 visible when a button is clicked
+					 
+					 var showQ7 = document.getElementById("ques7");
+					 showQ7.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ7.style.display = "block";  // makes question 7 visible when a button is clicked
+					 
+					 var showQ8 = document.getElementById("ques8");
+					 showQ8.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ8.style.display = "block";  // makes question 8 visible when a button is clicked
+					 
+					 var showQ9 = document.getElementById("ques9");
+					 showQ9.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ9.style.display = "block";  // makes question 9 visible when a button is clicked
+					 
+					 var showQ10 = document.getElementById("ques10");
+					 showQ10.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+                     {duration: 1000})
+					 showQ10.style.display = "block";  // makes question 10 visible when a button is clicked
+				}
+
+			</script>
+  </head>
+  <body>
+     
+   <header>
+      <div class="topnav" style="position:relative;">
+         <a href="../Student 02/main.html"><b><i>Home</i></b></a>
+         <a href="../Student 04/SVG.html"><b><i>Site-Map</i></b></a>
+         <a href="../Student 01/products.html"><b><i>Products</i></b></a>
+         <a href="../Student 04/Thumbnail.html"><b><i>Thumbnails</i></b></a>
+         <a href="../Student 02/queries.html"><b><i>Queries</i></b></a>
+         <a class="active" href="../Student 03/quiz.html"><b><i>Quiz</i></b></a>
+         <a href="../Student 03/students.html"><b><i>Student Details</i></b></a>
+      </div>
+      <br>
+            
+      <div class="logo">
+            <img src="Images/logo.png" width="180" height="180" alt="logo">
+      </div>
+      <h1>Athlitismós</h1>
+   </header>
+  
+  <div class="image">
+  <img src="Images/left.jpg" alt="Sports image" class="image1">
+  <img src="Images/right.jpg" alt="Sports image" class="image2">
+  </div>
+  
+  <div class="info">
+  <div class="para">
+  <p> Welcome To The Quiz</p>
+  
+  <p >Time Left</p>
+  
+  <p id="secs" >60</p>
+    
+  <p>Seconds</p>
+  <div class="infonew">
+  <p id="timsup" ></p>
+  </div>
+
+  </div>
+  </div>
+  
+  
+   <div class="results">
+  <div class="paraesults">
+  <p><u> Results</u></p>
+  <p>(Your score will be displayed here once you complete the quiz)</p>
+  <p >Time Taken:</p> 
+  <p id="lastfinaltime" >-</p>
+  <p id="test">Score:</p>
+  <p id="score"></p>
+  
+    <a href="#top">  <img src="Images/toparow.jpg"  alt="Go Top" class="topbtn"></a>
+  </div>
+  </div>
+
+  
+  
+  <div class="container" id="cont1">
+  
+  <div class="main" id="main1">
+  
+  
+    <br><br><br><br><br><br><br>
+  <label class="adjusment">spaceeeeeeeeeeeeee</label>
+  <button id="start" class="startbtn" onclick="startTimer(); showQuestions();" >Start Quiz</button>
+  <br><br><br>
+  
+  
+  
+  <form name="quiz" id="form">
+  <div class=question id="ques1" style="display:none">1. Who is the sports minister of Sri Lanka?</div>
+  <br>
+  <input type="radio" name="question1" id="1" class="q1" value="w">
+     <label for="1" class="label1">
+        A. Mahinda Rajapaksha 
+     </label>	
+	 <br>
+  <input type="radio" name="question1" id="2" class="q1" value="w">
+     <label for="2" class="label1" >
+        B. Gotabaya Rajapaksha 
+     </label>
+	 <br>
+  <input type="radio" name="question1" id="3" class="q1" value="c1">
+     <label for="3" class="label1" id="c1">
+        C. Namal Rajapaksha 
+     </label>
+	 <br>
+  <input type="radio" name="question1" id="4" class="q1" value="w">
+     <label for="4" class="label1">
+        D. Basil Rajapaksha  
+     </label>
+<br><br>
+
+
+
+    <div class=question id="ques2" style="display:none">2. What is the national sports of Sri Lanka?</div>	
+    <br>	
+  <input type="radio" name="question2" id="5" class="q1" value="c2">
+     <label for="5" class="label1" id="c2">
+        A. Volley Ball 
+     </label>	
+	 <br>
+  <input type="radio" name="question2" id="6" class="q1" value="w">
+     <label for="6" class="label1">
+        B. BasketBall 
+     </label>
+	 <br>
+  <input type="radio" name="question2" id="7" class="q1" value="w">
+     <label for="7" class="label1">
+        C. Cricket 
+     </label>
+	 <br>
+  <input type="radio" name="question2" id="8" class="q1" value="w">
+     <label for="8" class="label1">
+        D. Foot Ball
+     </label>
+<br><br>	
+<br><br>
+
+
+
+    <div class=question id="ques3" style="display:none">3. What is the most popular sports in Sri Lanka?</div>	
+    <br>	
+  <input type="radio" name="question3" id="9" class="q1" value="c3">
+     <label for="9" class="label1" id="c3">
+        A. Cricket 
+     </label>	
+	 <br>
+  <input type="radio" name="question3" id="10" class="q1" value="w">
+     <label for="10" class="label1">
+        B. Hockey 
+     </label>
+	 <br>
+  <input type="radio" name="question3" id="11" class="q1" value="w">
+     <label for="11" class="label1">
+        C. Tennis 
+     </label>
+	 <br>
+  <input type="radio" name="question3" id="12" class="q1" value="w">
+     <label for="12" class="label1">
+        D. Basket Ball 
+     </label>
+<br><br>
+
+<br><br>
+
+
+
+    <div class=question id="ques4" style="display:none">4. When was Sri Lanka won the cricket world cup?</div>	
+    <br>	
+  <input type="radio" name="question4" id="13" class="q1" value="w">
+     <label for="13" class="label1" >
+        A. 1994 
+     </label>	
+	 <br>
+  <input type="radio" name="question4" id="14" class="q1" value="w">
+     <label for="14" class="label1">
+        B. 1992 
+     </label>
+	 <br>
+  <input type="radio" name="question4" id="15" class="q1" value="w">
+     <label for="15" class="label1">
+        C. 1998 
+     </label>
+	 <br>
+  <input type="radio" name="question4" id="16" class="q1" value="c4">
+     <label for="16" class="label1" id="c4">
+        D. 1996 
+     </label>
+<br><br>
+
+<br><br>
+
+
+
+    <div class=question id="ques5" style="display:none">5. Who was the first olympic medalist in Sri Lanka?</div>	
+    <br>	
+  <input type="radio" name="question5" id="17" class="q1" value="w">
+     <label for="17" class="label1" >
+        A. Kumar Sangakkara 
+     </label>	
+	 <br>
+  <input type="radio" name="question5" id="18" class="q1" value="w">
+     <label for="18" class="label1">
+        B. Mahela Jayawardana
+     </label>
+	 <br>
+  <input type="radio" name="question5" id="19" class="q1" value="w">
+     <label for="19" class="label1">
+        C. Susanthika Jayasinghe 
+     </label>
+	 <br>
+  <input type="radio" name="question5" id="20" class="q1" value="c5">
+     <label for="20" class="label1" id="c5">
+        D. Duncan White
+     </label>
+<br><br>
+<br><br>
+
+
+
+    <div class=question id="ques6" style="display:none">6. Who is the captain of Sri Lanka cricket team?</div>	
+    <br>	
+  <input type="radio" name="question6" id="21" class="q1" value="c6">
+     <label for="21" class="label1" id="c6">
+        A. Dimuth Karunaratna 
+     </label>	
+	 <br>
+  <input type="radio" name="question6" id="22" class="q1" value="w">
+     <label for="22" class="label1">
+        B. Kumar Sangakkara  
+     </label>
+	 <br>
+  <input type="radio" name="question6" id="23" class="q1" value="w">
+     <label for="23" class="label1">
+        C. Angelo Mathews 
+     </label>
+	 <br>
+  <input type="radio" name="question6" id="24" class="q1" value="w">
+     <label for="24" class="label1">
+        D. Dinesh Chandimal 
+     </label>
+<br><br>
+<br><br>
+
+
+
+    <div class=question id="ques7" style="display:none">7. When did Sri Lanka won the cricket T20world cup?</div>	
+    <br>	
+  <input type="radio" name="question7" id="25" class="q1" value="w">
+     <label for="25" class="label1" >
+        A. 1996 
+     </label>	
+	 <br>
+  <input type="radio" name="question7" id="26" class="q1" value="c7">
+     <label for="26" class="label1" id="c7">
+        C. 2014
+     </label>
+	 <br>
+  <input type="radio" name="question7" id="27" class="q1" value="w">
+     <label for="27" class="label1">
+        D. 2012 
+     </label>
+	 <br>
+  <input type="radio" name="question7" id="28" class="q1" value="w">
+     <label for="28" class="label1">
+        C. 2011
+     </label>
+<br><br>
+<br><br>
+
+
+
+    <div class=question id="ques8" style="display:none">8. Who was the first sports minister of Sri Lanka?</div>	
+    <br>	
+  <input type="radio" name="question8" id="29" class="q1" value="w">
+     <label for="29" class="label1" >
+        A. Sugathadasa  
+     </label>	
+	 <br>
+  <input type="radio" name="question8" id="30" class="q1" value="w">
+     <label for="30" class="label1">
+        B. Kannangara 
+     </label>
+	 <br>
+  <input type="radio" name="question8" id="31" class="q1" value="w">
+     <label for="31" class="label1">
+        C. Variyapola 
+     </label>
+	 <br>
+  <input type="radio" name="question8" id="32" class="q1" value="c8">
+     <label for="32" class="label1" id="c8">
+        D. Ratnayake 
+     </label>
+<br><br>
+<br><br>
+
+
+
+    <div class=question id="ques9" style="display:none">9. Who was Sri Lanka's first test captain?</div>	
+    <br>	
+  <input type="radio" name="question9" id="33" class="q1" value="w">
+     <label for="33" class="label1" >
+        A. Sugathadasa 
+     </label>	
+	 <br>
+  <input type="radio" name="question9" id="34" class="q1" value="c9">
+     <label for="34" class="label1" id="c9">
+        B.Duleep Mendis 
+     </label>
+	 <br>
+  <input type="radio" name="question9" id="35" class="q1" value="w">
+     <label for="35" class="label1">
+        C.Variyapola 
+     </label>
+	 <br>
+  <input type="radio" name="question9" id="36" class="q1" value="w">
+     <label for="36" class="label1">
+        D.Ratnayake 
+     </label>
+<br><br>
+<br><br>
+
+
+
+    <div class=question id="ques10" style="display:none">10. Who is the first bowler to take 800 wickets in Sri Lankan cricket?</div>	
+    <br>	
+  <input type="radio" name="question10" id="37" class="q1" value="w">
+     <label for="37" class="label1" >
+        A. Chaminda Vaas 
+     </label>	
+	 <br>
+  <input type="radio" name="question10" id="38" class="q1" value="c10">
+     <label for="38" class="label1" id="c10">
+        B. Muralitharan 
+     </label>
+	 <br>
+  <input type="radio" name="question10" id="39" class="q1" value="w">
+     <label for="39" class="label1">
+        C. Sangakkara 
+     </label>
+	 <br>
+  <input type="radio" name="question10" id="40" class="q1" value="w">
+     <label for="40" class="label1">
+        D. Herath 
+     </label>
+
+<br><br><br>
+
+
+	 
+	           
+	 
+  </form>
+  
+
+  <br>
+  <br>
+  <div class="forsubmitbtn">
+  <label class="adjusment">spaceeeeeeeeeeeeeee.</label>
+  <button id="sub" class="startbtn1" onclick="clearInterval(tmr); check();">Submit</button>
+  </div>
+  <br>
+ 
+  <a href="../Student 03/my info.html">Page Developer</a>
+<br><br><br><br><br><br><br><br>
+
+
+  </div>
+					
+	 </div>
+    <!-- Footer -->
+  <div class="footer">
+    <span>©2021. Many Rights Reserved.</span>
+    <div class="social">
+      Find Us On:
+      <a href="https://www.facebook.com/"><img src="Images/facebookl.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/"><img src="Images/instagraml.png" alt="instagram"></a>
+      <a href="https://www.linkedin.com/"><img src="Images/linkedInl.png" alt="linkedIn"></a>
+      <a href="https://twitter.com/"><img src="Images/twitterl.png" alt="twitter"></a>
+    </div>
+  </div>
+  </body>
+  </html>

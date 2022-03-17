@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- link everyoneStyle.css -->
+		<link rel="stylesheet" href="Stylesheets/everyoneStyle.css">
+		<!-- link queriesStyle.css -->
+		<link rel="stylesheet" href="Stylesheets/queriesStyle.css">
+		<link rel="icon" href="Images/logotitle.png" type="image/x-icon">
+		<title>Feedback</title>
+	</head>
+	<body>
+		<!-- navigation bar -->
+		<header>
+			<div class="topnav">
+				<a href="../Student 02/main.html"><b><i>Home</i></b></a>
+				<a href="../Student 04/SVG.html"><b><i>Site-Map</i></b></a>
+				<a href="../Student 01/products.html"><b><i>Products</i></b></a>
+				<a href="../Student 04/Thumbnail.html"><b><i>Thumbnails</i></b></a>
+				<a class="active" href="../Student 02/queries.html"><b><i>Queries</i></b></a>
+				<a href="../Student 03/quiz.html"><b><i>Quiz</i></b></a>
+				<a href="../Student 03/students.html"><b><i>Student Details</i></b></a>
+			</div>
+			<br><br><br><br>
+			<div class="logo">
+					<img src="Images/logo.png" width="180" height="180" alt="Logo">
+			</div>
+			<h1>Athlitismós</h1>
+		</header>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Site name -->
+		
+		<!-- query form -->
+		<div class="container">
+		<form name="queries">
+			<div class="feedback_content">
+				<h2><u><i>Questions?</i></u></h2>
+				<table>
+					<tr>
+						<td><label for="first_name">First name:</label><br><br></td>
+						<td><input type="text" name="firstname" id="first_name" placeholder="First name" /><br><br></td>
+					</tr>
+					<tr>
+						<td><label for="surname">Surname:</label><br><br></td>
+						<td><input type="text" name="surname" id="surname" placeholder="Surname" /><br><br></td>
+					</tr>
+					<tr>
+						<td><label for="email">Email:</label><br><br></td>
+						<td><input type="email" name="emailaddress" id="email" placeholder="Email Address" /><br><br></td>
+					</tr>
+					<tr>
+						<td><label for="subject1">Subject:</label><br><br></td>
+						<td><input type="radio" name="radioButton" id="subject1" value="Delivery" />Delivery
+							<input type="radio" name="radioButton" id="subject2" value="Return Products" />Return Products
+							<input type="radio" name="radioButton" id="subject3" value="Other" />Other </td>
+					</tr>
+					<tr>
+						<td><label for="comments">Details:</label><br><br></td>
+						<td><textarea name="textarea" cols="90" rows="8" id="comments"></textarea><br><br></td>
+					</tr>
+					<tr>
+						<td><button onclick="validateForm()" class="button">Submit</button></td> 
+						<td><button onclick="window.location.reload()" class="button">Reset</button></td>
+					</tr>	
+					</table>
+			</div>
+		</form>
+		</div>
+		<!-- java script for query form -->
+		<script>
+			function validateForm() {
+				var fn = document.forms["queries"]["first_name"].value;
+				if (fn == "" || fn == null) {
+    			alert("First name must be filled out.");
+    			return false;}
+				var sn = document.forms["queries"]["surname"].value;
+				if (sn == "" || sn == null) {
+    			alert("Surname must be filled out.");
+    			return false;}
+				var em = document.forms["queries"]["email"].value;
+				if (em == "" || em == null) {
+    			alert("Email must be filled out.");
+    			return false;}
+				var a =document.getElementById("subject1");
+				var b =document.getElementById("subject2");
+				var c =document.getElementById("subject3");
+				var com = document.forms["queries"]["comments"].value;
+				if (com == "" || com == null) {
+    			alert("Query detils must be filled out.");
+    			return false;}
+				if (a.checked == true){
+					var subject = "Delivery";
+				}
+				if (b.checked == true){
+					var subject = "Return Products";
+				}
+				if (c.checked == true){
+					var subject = "Other";
+				}
+				if (subject == "" || subject == null) {
+    			alert("A subject must be chosen.");
+    			return false;}
+				window.alert("You'r Query"+"\nName: "+fn + " " + sn + "\nEmail: " + em + "\nSubject: " + subject + "\nDetails: " + com);
+			}
+		</script>
+		<!-- thanks for the feedback -->
+		<div class="secondstyle">
+			<p>We thank you for you'r honest feedback and for any suggestions you may have inorder to better our services.</p>
+			<p>Feel free to contact us any time, we highly welcome any and all suggestions you may have on improving our site and on how we may provide you with a better service and experience.</p>
+			<p>If you have any doubts about our products and such concerns, please feel free to inquire us about it, our dedicated support team is always on the stand by to reply to your queries within a moments notice.</p>
+		</div>
+		<br><br><br><br><br><br><br>
+		<!-- developer page link -->
+		<a href="#top"><img src="images/top.png"
+		width="50" height="50" alt="Back to top Image"></a>
+
+		<!-- Footer -->
+		<div class="footer">
+			<span>©2021. Many Rights Reserved.</span><br>
+			<a href="Umesh.html">Page Developer</a>
+			<div class="social">
+				Find Us on:
+				<a href="https://www.facebook.com/"><img src="Images/facebookl.png" alt="facebook"></a>
+				<a href="https://www.instagram.com/"><img src="Images/instagraml.png" alt="instagram"></a>
+				<a href="https://www.linkedin.com/"><img src="Images/linkedInl.png" alt="linkedIn"></a>
+				<a href="https://twitter.com/"><img src="Images/twitterl.png" alt="twitter"></a>
+			</div>
+		</div>
+	</body>
+</html>	

@@ -1,0 +1,284 @@
+html{
+	scroll-behavior:smooth;
+}
+body{
+	margin:0;
+	padding:0;
+  background-image: url("../Images/cover1.jpg");
+  background-repeat: no-repeat;
+	background-size:100% 100%;
+	font-size:100%;
+	
+    
+}
+
+
+/* Title */
+h1 {
+	font-family: Moderne Sans, sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	width: 100%;
+	letter-spacing: .5rem;
+}
+
+header {
+
+	width: 100%;
+	text-align: center;
+}
+
+.studentdtails{
+	  color:white;
+	  text-align:center;
+	 
+  }
+ .std{ 
+  position:relative;
+	  left:-10px;
+	  top:50px;
+ }
+  .members{
+       height: 1300px;
+       width:100%;
+       display: grid;
+       grid-template-columns: 50% 50%;
+  }
+  
+ h1.topic {
+    color: rgb(15, 1, 1) ;
+    text-align: center ;
+    text-shadow: 2px 2px 0px rgb(0, 255, 255);
+    font-size: 70px;
+    letter-spacing: 10px;
+  }
+  
+
+/* Student 1 */
+  .picture1{
+    width: 365px;
+    height: 400px;
+    position: relative;
+	left:140px;
+	top:200px;
+    cursor: pointer;
+    padding-left: 90px;
+  }
+  .picture1:hover .new1{
+    height: 80%;
+  }
+  .picture1 img {
+    display: block;
+    width: 300px;
+    height: 400px;
+  }
+  .new1{
+    width: 66%;
+    height: 0;
+    background: linear-gradient(rgba(120, 0, 255, 0.05),rgba(120, 0, 255, 0.10),rgba(120, 0, 255, 0.60),rgba(120, 0, 255,0.70),rgba(120, 0, 255, .80),rgba(120, 0, 255, 1));
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+  }
+  .new1 h2{
+    color: white;
+    font-size: 40px;
+    /* border: 6px solid white; */
+    padding: 10px 10px;
+	position:absolute;
+	top:140px;
+	text-align:center;
+  }
+/* Student 1 */
+
+/* Student 2 */
+  .picture2{
+    width: 365px;
+    height: 400px;
+    position: relative;
+	left:30px;
+	top:200px;
+    cursor: pointer;
+    padding-left: 90px;
+  }
+  .picture2:hover .new2{
+    height: 80%;
+  }
+  .picture2 img {
+    display: block;
+    width: 300px;
+    height: 400px;
+  }
+  .new2{
+    width: 67%;
+    height: 0;
+    background: linear-gradient(rgba(120, 0, 255, 0.05),rgba(120, 0, 255, 0.10),rgba(120, 0, 255, 0.60),rgba(120, 0, 255,0.70),rgba(120, 0, 255, .80),rgba(120, 0, 255, 1));
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+  }
+  .new2 h2{
+    color: white;
+    font-size: 40px;
+    /* border: 6px solid white; */
+    padding: 10px 10px;
+	position:absolute;
+	top:140px;
+	text-align:center;
+  }
+/* Student 2 */
+
+/* Student 3 */
+  .picture3{
+    width: 365px;
+    height: 400px;
+    position: relative;
+	left:140px;
+	top:80px;
+    cursor: pointer;
+    padding-left: 90px;
+  }
+  .picture3:hover .new3{
+    height: 80%;
+  }
+  .picture3 img {
+    display: block;
+    width: 300px;
+    height: 400px;
+  }
+  .new3{
+    width: 66%;
+    height: 0;
+    background: linear-gradient(rgba(120, 0, 255, 0.05),rgba(120, 0, 255, 0.10),rgba(120, 0, 255, 0.60),rgba(120, 0, 255,0.70),rgba(120, 0, 255, .80),rgba(120, 0, 255, 1));
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+  }
+  .new3 h2{
+    color: white;
+    font-size: 40px;
+    /* border: 6px solid white; */
+    padding: 10px 10px;
+	position:absolute;
+	top:140px;
+	text-align:center;
+  }
+/* Student 3 */
+
+
+/* Student 4 */
+  .picture4{
+    width: 365px;
+    height: 400px;
+    position: relative;
+	left:30px;
+	top:80px;
+    cursor: pointer;
+    padding-left: 90px;
+  }
+  .picture4:hover .new4{
+    height: 80%;
+  }
+  .picture4 img {
+    display: block;
+    width: 300px;
+    height: 400px;
+  }
+  .new4{
+    width: 67%;
+    height: 0;
+    background: linear-gradient(rgba(120, 0, 255, 0.05),rgba(120, 0, 255, 0.10),rgba(120, 0, 255, 0.60),rgba(120, 0, 255,0.70),rgba(120, 0, 255, .80),rgba(120, 0, 255, 1));
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+  }
+  .new4 h2{
+    color: white;
+    font-size: 40px;
+    /* border: 6px solid white; */
+    padding: 10px 10px;
+	position:absolute;
+	top:140px;
+	text-align:center;
+  }
+/* Student 4 */
+				  
+#main_button {
+				padding: 1%;
+				width: fit-content;
+				margin-top: 2%;
+				background: #75FF20;
+				border-radius: 20px;
+				font-weight: 500;
+				opacity: 0.9;
+				transition: transform 0.5s, opacity 0.5s;
+				}
+
+			#main_button:hover {
+				transform: scale(1.2);
+				opacity: 1;
+				}
+					
+			#abc{text-decoration:none;}
+			
+
+			a{ color:black;
+			}				  
+				  
+.footer {
+				position: relative;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: #242424;
+				padding: 40px;
+				font-weight: 400;
+				font-size: 14px;
+				}
+				
+			.footer span{
+				color: #fff;
+				}
+			.social {
+				float: right;
+				color: #fff;
+				}
+				
+			.social a {
+				width:25px;
+				text-align: center;
+				margin: 0px 23px;
+				filter: drop-shadow(0px 4px 4px #00000040);
+				}
+				
+			.social img {
+				width: 25px;
+				}				  
+img
+{
+    box-shadow: 10px 0px 50px #00ffff;
+}				  
+.goTop{border-radius:14%;
+width:7%;
+transition:.3s ease-in;
+}
+.goTop:hover {
+  box-shadow: 0px 0px 40px rgba(120, 0, 255,1);
+  
+}
